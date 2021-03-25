@@ -1,14 +1,9 @@
 public class Yatzy {
 
-    public static int chance(int d1, int d2, int d3, int d4, int d5)
+
+    public static int chance(DiceMove diceMove)
     {
-        int total = 0;
-        total += d1;
-        total += d2;
-        total += d3;
-        total += d4;
-        total += d5;
-        return total;
+    return  diceMove.counts();
     }
 
     public static int yatzy(int... dice)
@@ -22,16 +17,9 @@ public class Yatzy {
         return 0;
     }
 
-    public static int ones(int d1, int d2, int d3, int d4, int d5) {
-        int sum = 0;
-        if (d1 == 1) sum++;
-        if (d2 == 1) sum++;
-        if (d3 == 1) sum++;
-        if (d4 == 1) sum++;
-        if (d5 == 1) 
-            sum++;
+    public static int ones(DiceMove diceMove) {
 
-        return sum;
+        return diceMove.countByOccurence(1);
     }
 
     public static int twos(int d1, int d2, int d3, int d4, int d5) {
