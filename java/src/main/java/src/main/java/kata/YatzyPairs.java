@@ -15,7 +15,7 @@ public class YatzyPairs extends Yatzy {
     // filter dice number greater than int , and return stream of integer
     protected Stream<Integer> filterDiceGreaterThan(int number){
         return countAlldicesOccurence().entrySet().stream()
-                .filter(i -> i.getValue() > number)
+                .filter(i -> i.getValue() >= number)
                 .map(Map.Entry::getKey) ;
     }
 

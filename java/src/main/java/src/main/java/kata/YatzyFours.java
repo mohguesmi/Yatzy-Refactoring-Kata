@@ -7,7 +7,7 @@ public class YatzyFours extends YatzyThrees {
     }
 
     @Override
-    public  int scores() {
-        return getDiceWithCountGreaterThan(4) * 4;
+    public int scores(){
+        return countDice(4) * 4;
     }
 }

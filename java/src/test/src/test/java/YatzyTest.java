@@ -1,4 +1,4 @@
-package src.test;
+package src.test.java;
 
 import org.junit.*;
 import src.main.java.kata.*;
@@ -29,11 +29,11 @@ public class YatzyTest {
         Yatzy yatzy4 = new Yatzy(1, 1, 1, 1, 1);
         Yatzy yatzy5 = new Yatzy(1, 1, 1, 2, 1);
 
-        assertEquals(50, yatzy1);
-        assertEquals(50, yatzy2);
-        assertEquals(0, yatzy3);
-        assertEquals(50, yatzy4);
-        assertEquals(0, yatzy5);
+        assertEquals(50, yatzy1.scores());
+        assertEquals(50, yatzy2.scores());
+        assertEquals(0, yatzy3.scores());
+        assertEquals(50, yatzy4.scores());
+        assertEquals(0, yatzy5.scores());
     }
 
     @Test
@@ -44,11 +44,11 @@ public class YatzyTest {
         YatzyOnes ones4 = new YatzyOnes(1, 2, 1, 1, 1);
         YatzyOnes ones5 = new YatzyOnes(3, 3, 3, 4, 5);
 
-        assertEquals(1, ones1);
-        assertEquals(2, ones2);
-        assertEquals(0, ones3);
-        assertEquals(4, ones4);
-        assertEquals(0, ones5);
+        assertEquals(1, ones1.scores());
+        assertEquals(2, ones2.scores());
+        assertEquals(0, ones3.scores());
+        assertEquals(4, ones4.scores());
+        assertEquals(0, ones5.scores());
     }
 
     @Test
@@ -57,9 +57,9 @@ public class YatzyTest {
         YatzyTwos twos2 = new YatzyTwos(2, 2, 2, 2, 2);
         YatzyTwos twos3 = new YatzyTwos(2, 3, 2, 5, 1);
 
-        assertEquals(4, twos1);
-        assertEquals(10, twos2);
-        assertEquals(4, twos3);
+        assertEquals(4, twos1.scores());
+        assertEquals(10, twos2.scores());
+        assertEquals(4, twos3.scores());
     }
 
     @Test
@@ -67,8 +67,8 @@ public class YatzyTest {
         YatzyThrees threes1 = new YatzyThrees(1, 2, 3, 2, 3);
         YatzyThrees threes2 = new YatzyThrees(2, 3, 3, 3, 3);
 
-        assertEquals(6, threes1);
-        assertEquals(12, threes2);
+        assertEquals(6, threes1.scores());
+        assertEquals(12, threes2.scores());
     }
 
     @Test
@@ -78,10 +78,10 @@ public class YatzyTest {
         YatzyFours fours3 = new YatzyFours(4, 5, 5, 5, 5);
         YatzyFours fours4 = new YatzyFours(1, 1, 2, 4, 4);
 
-        assertEquals(12, fours1);
-        assertEquals(8, fours2);
-        assertEquals(4, fours3);
-        assertEquals(8, fours4);
+        assertEquals(12, fours1.scores());
+        assertEquals(8, fours2.scores());
+        assertEquals(4, fours3.scores());
+        assertEquals(8, fours4.scores());
     }
 
     @Test
@@ -90,9 +90,9 @@ public class YatzyTest {
         YatzyFives fives2 = new YatzyFives(4, 4, 5, 5, 5);
         YatzyFives fives3 = new YatzyFives(4, 5, 5, 5, 5);
 
-        assertEquals(10, fives1);
-        assertEquals(15, fives2);
-        assertEquals(20, fives3);
+        assertEquals(10, fives1.scores());
+        assertEquals(15, fives2.scores());
+        assertEquals(20, fives3.scores());
     }
 
     @Test
@@ -101,9 +101,9 @@ public class YatzyTest {
         YatzySixes sixes2 = new YatzySixes(4, 4, 6, 5, 5);
         YatzySixes sixes3 = new YatzySixes(6, 5, 6, 6, 5);
 
-        assertEquals(0, sixes1);
-        assertEquals(6, sixes2);
-        assertEquals(18, sixes3);
+        assertEquals(0, sixes1.scores());
+        assertEquals(6, sixes2.scores());
+        assertEquals(18, sixes3.scores());
     }
 
     @Test
@@ -117,14 +117,14 @@ public class YatzyTest {
         YatzyPairs pairs7 = new YatzyPairs(3, 3, 3, 3, 1);
         YatzyPairs pairs8 = new YatzyPairs(1, 2, 3, 4, 5);
 
-        assertEquals(6, pairs1);
-        assertEquals(10, pairs2);
-        assertEquals(12, pairs3);
-        assertEquals(8, pairs4);
-        assertEquals(12, pairs5);
-        assertEquals(6, pairs6);
-        assertEquals(6, pairs7);
-        assertEquals(0, pairs8);
+        assertEquals(6, pairs1.scores());
+        assertEquals(10, pairs2.scores());
+        assertEquals(12, pairs3.scores());
+        assertEquals(8, pairs4.scores());
+        assertEquals(12, pairs5.scores());
+        assertEquals(6, pairs6.scores());
+        assertEquals(6, pairs7.scores());
+        assertEquals(0, pairs8.scores());
     }
 
     @Test
@@ -135,11 +135,11 @@ public class YatzyTest {
         YatzyTwoPairs twoPairs4 = new YatzyTwoPairs(1, 1, 2, 3, 4);
         YatzyTwoPairs twoPairs5 = new YatzyTwoPairs(1, 1, 2, 2, 2);
 
-        assertEquals(16, twoPairs1);
-        assertEquals(16, twoPairs2);
-        assertEquals(8, twoPairs3);
-        assertEquals(0, twoPairs4);
-        assertEquals(6, twoPairs5);
+        assertEquals(16, twoPairs1.scores());
+        assertEquals(16, twoPairs2.scores());
+        assertEquals(8, twoPairs3.scores());
+        assertEquals(0, twoPairs4.scores());
+        assertEquals(6, twoPairs5.scores());
 
     }
 
@@ -151,11 +151,11 @@ public class YatzyTest {
         YatzyThreeOfKind threeOfKind4 = new YatzyThreeOfKind(3, 3, 4, 5, 6);
         YatzyThreeOfKind threeOfKind5 = new YatzyThreeOfKind(3, 3, 3, 3, 1);
 
-        assertEquals(15, threeOfKind1);
-        assertEquals(9, threeOfKind2);
-        assertEquals(9, threeOfKind3);
-        assertEquals(0, threeOfKind4);
-        assertEquals(9, threeOfKind5);
+        assertEquals(15, threeOfKind1.scores());
+        assertEquals(9, threeOfKind2.scores());
+        assertEquals(9, threeOfKind3.scores());
+        assertEquals(0, threeOfKind4.scores());
+        assertEquals(9, threeOfKind5.scores());
     }
 
     @Test
@@ -167,11 +167,11 @@ public class YatzyTest {
         YatzyFourOfAKind fourOfKind4 = new YatzyFourOfAKind(2, 2, 2, 5, 5);
         YatzyFourOfAKind fourOfKind5 = new YatzyFourOfAKind(2, 2, 2, 2, 2);
 
-        assertEquals(12, fourOfKind1);
-        assertEquals(20, fourOfKind2);
-        assertEquals(8, fourOfKind3);
-        assertEquals(0, fourOfKind4);
-        assertEquals(8, fourOfKind5);
+        assertEquals(12, fourOfKind1.scores());
+        assertEquals(20, fourOfKind2.scores());
+        assertEquals(8, fourOfKind3.scores());
+        assertEquals(0, fourOfKind4.scores());
+        assertEquals(8, fourOfKind5.scores());
     }
 
     @Test
@@ -181,9 +181,9 @@ public class YatzyTest {
         YatzySmallStraight smallStraight2 = new YatzySmallStraight(2, 3, 4, 5, 1);
         YatzySmallStraight smallStraight3 = new YatzySmallStraight(1, 2, 2, 4, 5);
 
-        assertEquals(15, smallStraight1);
-        assertEquals(15, smallStraight2);
-        assertEquals(0, smallStraight3);
+        assertEquals(15, smallStraight1.scores());
+        assertEquals(15, smallStraight2.scores());
+        assertEquals(0, smallStraight3.scores());
     }
 
     @Test
@@ -193,9 +193,9 @@ public class YatzyTest {
         YatzyLargeStraight largeStraight2 = new YatzyLargeStraight(2, 3, 4, 5, 6);
         YatzyLargeStraight largeStraight3 = new YatzyLargeStraight(1, 2, 2, 4, 5);
 
-        assertEquals(20, largeStraight1);
-        assertEquals(20, largeStraight2);
-        assertEquals(0, largeStraight3);
+        assertEquals(20, largeStraight1.scores());
+        assertEquals(20, largeStraight2.scores());
+        assertEquals(0, largeStraight3.scores());
     }
 
     @Test
@@ -206,10 +206,10 @@ public class YatzyTest {
         YatzyFullHouse fullHouse3 = new YatzyFullHouse(1, 1, 2, 2, 2);
         YatzyFullHouse fullHouse4 = new YatzyFullHouse(2, 2, 3, 3, 4);
 
-        assertEquals(18, fullHouse1);
-        assertEquals(0, fullHouse2);
-        assertEquals(8, fullHouse3);
-        assertEquals(0, fullHouse4);
+        assertEquals(18, fullHouse1.scores());
+        assertEquals(0, fullHouse2.scores());
+        assertEquals(8, fullHouse3.scores());
+        assertEquals(0, fullHouse4.scores());
 
     }
 

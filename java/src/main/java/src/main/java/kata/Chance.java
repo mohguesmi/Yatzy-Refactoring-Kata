@@ -7,7 +7,7 @@ public class Chance extends DiceMove {
     }
 
     public int scores() {
-        return this.counts();
+        return sum();
     }
 
 }
